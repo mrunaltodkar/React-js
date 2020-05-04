@@ -1,16 +1,39 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import logo from './images/logo_coupons.png'
 
 function Nav() {
     const navStyle = {
-        color: 'white'
+        color: 'rgb(14, 13, 13)',
 
     }
+
     return (
         <nav>
-            <h3>Logo</h3>
+            <ul>
+                <Link to="/" style={{textAlign: 'start'}}>
+                <li><img className="logo" src={logo} alt="couponsdeal logo" /> </li>
+                </Link>
+            </ul>
+            <h2>CouponsDeal</h2>
             <ul className="nav-links">
-                    <li style={navStyle}>SignUp</li>
-                    <li style={navStyle}>SignIn</li>
+                <input type="text" placeholder="Search.." name="search" />
+
+                <Link to="/categories" style={navStyle} >
+                    <li>Categories</li>
+                </Link>
+                <Link to="/wishlist" style={navStyle} >
+                    <li>Wishlist</li>
+                </Link>
+                <Link to="/signup" style={navStyle} >
+                    <li>SignUp</li>
+                </Link>
+                <Link to="/login" style={navStyle} >
+                    <li>SignIn</li>
+                </Link>
+                <Link to="/aboutus" style={navStyle} >
+                    <li>About Us</li>
+                </Link>
             </ul>
         </nav>
     )
