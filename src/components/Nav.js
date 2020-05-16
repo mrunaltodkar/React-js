@@ -4,21 +4,21 @@ import logo from './images/logo_coupons.png'
 
 function Nav() {
     const navStyle = {
-        color: 'rgb(14, 13, 13)',
-
+        color: 'rgb(14, 13, 13)'
     }
 
     return (
         <nav>
             <ul>
-                <Link to="/" style={{textAlign: 'start'}}>
-                <li><img className="logo" src={logo} alt="couponsdeal logo" /> </li>
+                <Link to="/">
+                    <li><img className="logo" src={logo} alt="couponsdeal logo" /> </li>
                 </Link>
             </ul>
-            <h2>CouponsDeal</h2>
-            <ul className="nav-links">
-                <input type="text" placeholder="Search.." name="search" />
-
+            <input style={navStyle} type="text" placeholder=" Enter your  Search Here  " name="search" size='40' />
+            <ul className= "nav-links">
+                <Link to="/news" style={navStyle} >
+                    <li>News</li>
+                </Link>
                 <Link to="/categories" style={navStyle} >
                     <li>Categories</li>
                 </Link>

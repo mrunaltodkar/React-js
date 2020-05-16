@@ -6,6 +6,7 @@ import './Coupons.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Footer from './Footer';
+import Welcome from './Welcome';
 
 function Coupons() {
     return (
@@ -16,6 +17,7 @@ function Coupons() {
                     <Route path="/" exact component={Home} />
                     <Route path="/login" component={Signin} />
                     <Route path="/signup" component={Signup} />
+                    <Route path="/welcome" component={Welcome} />
                     
                 </Switch>
                 <Footer />
