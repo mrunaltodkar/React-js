@@ -20,8 +20,7 @@ export default class Signin extends Component {
         axios.post('http://localhost:8085/signIn', {
             email: this.state.email,
             password: this.state.password
-        })
-            .then((res) => {
+        }).then((res) => {
                 console.log(res);
             })
             .catch((err) => {
